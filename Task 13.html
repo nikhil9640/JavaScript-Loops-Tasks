@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 13: Count Prime Digits</title>
+</head>
+<body>
+    <h2>Count Prime Digits</h2>
+    <input type="number" id="numN13" placeholder="Enter a number">
+    <button onclick="countPrimeDigits()">Count</button>
+    <p id="result13"></p>
+
+    <script>
+        function countPrimeDigits() {
+            let numStr = document.getElementById('numN13').value;
+            let count = 0;
+            const primeDigits = ['2', '3', '5', '7'];
+
+            for (let i = 0; i < numStr.length; i++) {
+                if (primeDigits.includes(numStr[i])) {
+                    count++;
+                }
+            }
+            document.getElementById('result13').innerText = "Number of prime digits: " + count;
+        }
+    </script>
+</body>
+</html>

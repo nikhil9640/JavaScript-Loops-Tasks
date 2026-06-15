@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 9: Count Digits > 5</title>
+</head>
+<body>
+    <h2>Count Digits Greater Than 5</h2>
+    <input type="number" id="numN9" placeholder="Enter a number">
+    <button onclick="countDigitsG5()">Count</button>
+    <p id="result9"></p>
+
+    <script>
+        function countDigitsG5() {
+            let numStr = document.getElementById('numN9').value;
+            let count = 0;
+
+            for (let i = 0; i < numStr.length; i++) {
+                let digit = parseInt(numStr[i]);
+                if (digit > 5) {
+                    count++;
+                }
+            }
+            document.getElementById('result9').innerText = "Digits greater than 5: " + count;
+        }
+    </script>
+</body>
+</html>

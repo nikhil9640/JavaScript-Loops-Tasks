@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 10: Binary Check</title>
+</head>
+<body>
+    <h2>Binary Number Check</h2>
+    <input type="number" id="numN10" placeholder="Enter a number">
+    <button onclick="checkBinary()">Check</button>
+    <p id="result10"></p>
+
+    <script>
+        function checkBinary() {
+            let numStr = document.getElementById('numN10').value;
+            let isBinary = true;
+
+            for (let i = 0; i < numStr.length; i++) {
+                if (numStr[i] !== '0' && numStr[i] !== '1') {
+                    isBinary = false;
+                    break;
+                }
+            }
+
+            if (isBinary && numStr.length > 0) {
+                document.getElementById('result10').innerText = "Yes, it is a binary number.";
+            } else {
+                document.getElementById('result10').innerText = "No, it is not a binary number.";
+            }
+        }
+    </script>
+</body>
+</html>

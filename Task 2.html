@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 2: Print Odd Numbers</title>
+</head>
+<body>
+    <h2>Print Odd Numbers from 1 to N</h2>
+    <input type="number" id="numN2" placeholder="Enter N">
+    <button onclick="printOddNumbers()">Print</button>
+    <p id="result2"></p>
+
+    <script>
+        function printOddNumbers() {
+            let n = parseInt(document.getElementById('numN2').value);
+            let result = [];
+            
+            for (let i = 1; i <= n; i++) {
+                if (i % 2 !== 0) {
+                    result.push(i);
+                }
+            }
+            document.getElementById('result2').innerText = "Odd numbers: " + result.join(', ');
+        }
+    </script>
+</body>
+</html>

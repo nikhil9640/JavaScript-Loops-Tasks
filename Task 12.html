@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 12: Sum of Odd Position Digits</title>
+</head>
+<body>
+    <h2>Sum of Digits at Odd Positions (Right to Left)</h2>
+    <input type="number" id="numN12" placeholder="Enter a number">
+    <button onclick="sumOddPositions()">Calculate</button>
+    <p id="result12"></p>
+
+    <script>
+        function sumOddPositions() {
+            let numStr = document.getElementById('numN12').value;
+            let sum = 0;
+            
+            let position = 1; 
+            for (let i = numStr.length - 1; i >= 0; i--) {
+                if (position % 2 !== 0) {
+                    sum += parseInt(numStr[i]);
+                }
+                position++;
+            }
+            document.getElementById('result12').innerText = "Sum of digits at odd positions: " + sum;
+        }
+    </script>
+</body>
+</html>

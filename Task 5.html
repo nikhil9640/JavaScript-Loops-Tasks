@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 5: Count Multiples of 3</title>
+</head>
+<body>
+    <h2>Count Multiples of 3</h2>
+    <input type="number" id="numN5" placeholder="Enter N">
+    <button onclick="countMultiplesOfThree()">Count</button>
+    <p id="result5"></p>
+
+    <script>
+        function countMultiplesOfThree() {
+            let n = parseInt(document.getElementById('numN5').value);
+            let count = 0;
+            
+            for (let i = 1; i <= n; i++) {
+                if (i % 3 === 0) {
+                    count++;
+                }
+            }
+            document.getElementById('result5').innerText = `There are ${count} numbers divisible by 3.`;
+        }
+    </script>
+</body>
+</html>

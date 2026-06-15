@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 15: Digit Frequency</title>
+</head>
+<body>
+    <h2>Digit Frequency Counter</h2>
+    <input type="text" id="numN15" placeholder="Enter large number (N)">
+    <input type="number" id="digitD" placeholder="Digit to find (d)" min="0" max="9">
+    <button onclick="findDigitFrequency()">Count Frequency</button>
+    <p id="result15"></p>
+
+    <script>
+        function findDigitFrequency() {
+            let nStr = document.getElementById('numN15').value;
+            let dStr = document.getElementById('digitD').value;
+            let count = 0;
+
+            if(dStr.length === 0) return;
+
+            for (let i = 0; i < nStr.length; i++) {
+                if (nStr[i] === dStr) {
+                    count++;
+                }
+            }
+            document.getElementById('result15').innerText = `Digit ${dStr} appears ${count} times.`;
+        }
+    </script>
+</body>
+</html>

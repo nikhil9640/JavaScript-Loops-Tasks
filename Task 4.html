@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 4: Sum of Odd Numbers</title>
+</head>
+<body>
+    <h2>Sum of Odd Numbers</h2>
+    <input type="number" id="numN4" placeholder="Enter N">
+    <button onclick="sumOddNumbers()">Calculate Sum</button>
+    <p id="result4"></p>
+
+    <script>
+        function sumOddNumbers() {
+            let n = parseInt(document.getElementById('numN4').value);
+            let sum = 0;
+            
+            for (let i = 1; i <= n; i++) {
+                if (i % 2 !== 0) {
+                    sum += i;
+                }
+            }
+            document.getElementById('result4').innerText = "Sum of odd numbers: " + sum;
+        }
+    </script>
+</body>
+</html>

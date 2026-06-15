@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 4: Odd Numbers between 209 and 111</title>
+</head>
+<body>
+    <h2>Odd Numbers from 209 down to 111:</h2>
+    <div id="output"></div>
+
+    <script>
+        let result = " ";
+        for (let i = 209; i >= 111; i--) 
+        {
+            if (i % 2 !== 0) 
+            {
+                result += i + " ";
+            }
+        }
+        document.getElementById("output").innerText = result;
+    </script>
+</body>
+</html>

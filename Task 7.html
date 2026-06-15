@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 7: Largest Digit</title>
+</head>
+<body>
+    <h2>Find Largest Digit</h2>
+    <input type="number" id="numN7" placeholder="Enter a number">
+    <button onclick="findLargestDigit()">Find</button>
+    <p id="result7"></p>
+
+    <script>
+        function findLargestDigit() {
+            let numStr = document.getElementById('numN7').value;
+            let maxDigit = -1;
+
+            for (let i = 0; i < numStr.length; i++) {
+                let digit = parseInt(numStr[i]);
+                if (digit > maxDigit) {
+                    maxDigit = digit;
+                }
+            }
+            document.getElementById('result7').innerText = "Largest digit is: " + maxDigit;
+        }
+    </script>
+</body>
+</html>

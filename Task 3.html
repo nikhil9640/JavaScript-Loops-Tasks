@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 3: Sum of Even Numbers</title>
+</head>
+<body>
+    <h2>Sum of Even Numbers</h2>
+    <input type="number" id="numN3" placeholder="Enter N">
+    <button onclick="sumEvenNumbers()">Calculate Sum</button>
+    <p id="result3"></p>
+
+    <script>
+        function sumEvenNumbers() {
+            let n = parseInt(document.getElementById('numN3').value);
+            let sum = 0;
+            
+            for (let i = 1; i <= n; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+            document.getElementById('result3').innerText = "Sum of even numbers: " + sum;
+        }
+    </script>
+</body>
+</html>

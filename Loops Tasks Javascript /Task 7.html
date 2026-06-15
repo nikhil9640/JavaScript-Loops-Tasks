@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 7: Sum of Digits</title>
+</head>
+<body>
+    <h2>Sum of Digits calculation:</h2>
+    <div id="output"></div>
+
+    <script>
+        let inputNumber = 1234;
+        let originalNumber = inputNumber;
+        let sum = 0;
+        let digitsArray = [];
+
+        while (inputNumber > 0) 
+        {
+            let digit = inputNumber % 10; 
+            digitsArray.unshift(digit);   
+            sum += digit;                 
+            inputNumber = Math.floor(inputNumber / 10); 
+        }
+        let displayExpression = digitsArray.join(" + ");
+        document.getElementById("output").innerText = 
+            `${originalNumber} -> ${displayExpression} = ${sum}`;
+    </script>
+</body>
+</html>

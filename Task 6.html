@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 6: FizzBuzz Variant</title>
+</head>
+<body>
+    <h2>FizzBuzz Variant</h2>
+    <input type="number" id="numN6" placeholder="Enter N">
+    <button onclick="fizzBuzz()">Run FizzBuzz</button>
+    <div id="result6" style="margin-top: 10px; font-family: monospace; white-space: pre-line;"></div>
+
+    <script>
+        function fizzBuzz() {
+            let n = parseInt(document.getElementById('numN6').value);
+            let output = "";
+            
+            for (let i = 1; i <= n; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    output += "FizzBuzz\n";
+                } else if (i % 3 === 0) {
+                    output += "Fizz\n";
+                } else if (i % 5 === 0) {
+                    output += "Buzz\n";
+                } else {
+                    output += i + "\n";
+                }
+            }
+            document.getElementById('result6').innerText = output;
+        }
+    </script>
+</body>
+</html>

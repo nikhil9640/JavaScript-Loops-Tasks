@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 8: Smallest Digit</title>
+</head>
+<body>
+    <h2>Find Smallest Digit</h2>
+    <input type="number" id="numN8" placeholder="Enter a number">
+    <button onclick="findSmallestDigit()">Find</button>
+    <p id="result8"></p>
+
+    <script>
+        function findSmallestDigit() {
+            let numStr = document.getElementById('numN8').value;
+            if(numStr.length === 0) return;
+            
+            let minDigit = 9;
+
+            for (let i = 0; i < numStr.length; i++) {
+                let digit = parseInt(numStr[i]);
+                if (digit < minDigit) {
+                    minDigit = digit;
+                }
+            }
+            document.getElementById('result8').innerText = "Smallest digit is: " + minDigit;
+        }
+    </script>
+</body>
+</html>

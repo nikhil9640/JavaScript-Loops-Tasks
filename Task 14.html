@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 14: Categorize Numbers</title>
+</head>
+<body>
+    <h2>Categorize Numbers</h2>
+    <input type="number" id="numN14" placeholder="Enter N">
+    <button onclick="categorizeNumbers()">Categorize</button>
+    <div id="result14" style="margin-top: 10px; font-family: monospace; white-space: pre-line;"></div>
+
+    <script>
+        function categorizeNumbers() {
+            let n = parseInt(document.getElementById('numN14').value);
+            let output = "";
+
+            for (let i = 1; i <= n; i++) {
+                if (i < 10) {
+                    output += `${i}: Small\n`;
+                } else if (i >= 10 && i <= 50) {
+                    output += `${i}: Medium\n`;
+                } else {
+                    output += `${i}: Large\n`;
+                }
+            }
+            document.getElementById('result14').innerText = output;
+        }
+    </script>
+</body>
+</html>
